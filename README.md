@@ -38,8 +38,8 @@ AITrain: детекция препятствий и элементов доро�
 В корне архива обязательно должен быть файл metadata.json следующего содержания:
 ```json
 {
-    "image": "sberbank/rgd-python",
-    "entry_point": "python detect_railway_objects.py $PATH_INPUT $PATH_OUTPUT/output.csv"
+    "image": "cr.msk.sbercloud.ru/aicloud-base-images-test/custom/aij2021/aitrain:f66e1b5f-1269",
+    "entrypoint": "python3 /home/jovyan/solution.py"
 }
 ```
 
@@ -49,11 +49,7 @@ AITrain: детекция препятствий и элементов доро�
 
 Для запуска решений можно использовать существующие окружения:
 
-- `sberbank/rgd-python` — Python3 с установленным большим набором библиотек
-- `gcc` - для запуска компилируемых C/C++ решений
-- `node` — для запуска JavaScript
-- `openjdk` — для Java
-- `mono` — для C#
+- `cr.msk.sbercloud.ru/aicloud-base-images-test/custom/aij2021/aitrain:f66e1b5f-1269` — [Dockerfile](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/Dockerfile) с описанием данного image и [requirements](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/requirements.txt) с библиотеками
 
 Подойдет любой другой образ, доступный для загрузки из DockerHub. При необходимости, Вы можете подготовить свой образ, добавить в него необходимое ПО и библиотеки (см. инструкцию по созданию Docker-образов); для использования его необходимо будет опубликовать на DockerHub.
 
