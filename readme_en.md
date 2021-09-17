@@ -11,22 +11,22 @@ The input data are RGB images taken by various cameras installed on the train, w
 ## Task setting
 
 Based on the photos, you should create the detection algorithm for the following objects:
-- "Car" (автомобиль),
-- "Human" (человек),
-- "Wagon" (вагон)*,
-- "FacingSwitchL" (стрелочный перевод по ходу движения, влево),
-- "FacingSwitchR" (стрелочный перевод по ходу движения, вправо),
-- "FacingSwitchNV" (стрелочный перевод по ходу движения, вне видимости),
-- "TrailingSwitchL" (стрелочный перевод против хода движения, влево),
-- "TrailingSwitchR" (стрелочный перевод против хода движения, вправо),
-- "TrailingSwitchNV" (стрелочный перевод против хода движения, вне видимости),
-- "SignalE" (разрешающий сигнал светофора),
-- "SignalF" (запрещающий сигнал светофора).
+- "Car" (car),
+- "Human" (human),
+- "Wagon" (wagon)*,
+- "FacingSwitchL" (turnout switch in the direction of travel, to the left),
+- "FacingSwitchR" (turnout switch in the direction of travel, to the right),
+- "FacingSwitchNV" (turnout switch in the direction of travel, out of sight),
+- "TrailingSwitchL" (turnout switch against the course of movement, to the left),
+- "TrailingSwitchR" (turnout switch against the course of movement, to the right),
+- "TrailingSwitchNV" (turnout switch against the direction of travel, out of sight),
+- "SignalE" (traffic light permitting),
+- "SignalF" (no traffic light).
 
-Одновременно требуется разметить сегментационные маски для следующих элементов:
- - 6 - "MainRailPolygon" (главный ЖД-полигон);
- - 7 - "AlternativeRailPolygon" (вспомогательный ЖД-полигон);
- - 10 - "Train" (поезд)*.
+Besides, you need to put segmentation masks for the following elements:
+ - 6 - "MainRailPolygon";
+ - 7 - "AlternativeRailPolygon";
+ - 10 - "Train"*.
 
 Note: * - the first and last railcars are to be detected, and other railcars need segmentation masks.
 
@@ -71,7 +71,7 @@ Panoptic quality (PQ) is a quality metric of the task AITrain:
 
 ![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_1.png)  
 
-Что эквивалентно:  
+Which is equivalent to:  
 
 ![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_2.png)  
 
