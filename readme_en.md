@@ -11,16 +11,16 @@ The input data are RGB images taken by various cameras installed on the train, w
 ## Task setting
 
 Based on the photos, you should create the detection algorithm for the following objects:
-- "Car" (car),
-- "Human" (human),
-- "Wagon" (wagon)*,
-- "FacingSwitchL" (turnout switch in the direction of travel, to the left),
-- "FacingSwitchR" (turnout switch in the direction of travel, to the right),
-- "FacingSwitchNV" (turnout switch in the direction of travel, out of sight),
-- "TrailingSwitchL" (turnout switch against the course of movement, to the left),
-- "TrailingSwitchR" (turnout switch against the course of movement, to the right),
-- "TrailingSwitchNV" (turnout switch against the direction of travel, out of sight),
-- "SignalE" (traffic light permitting),
+- "Car" (car);
+- "Human" (human);
+- "Wagon" (wagon)*;
+- "FacingSwitchL" (turnout switch in the course of movement, to the left);
+- "FacingSwitchR" (turnout switch in the course of movement, to the right);
+- "FacingSwitchNV" (turnout switch in the course of movement, out of sight);
+- "TrailingSwitchL" (turnout switch against the course of movement, to the left);
+- "TrailingSwitchR" (turnout switch against the course of movement, to the right);
+- "TrailingSwitchNV" (turnout switch against the course of movement, out of sight);
+- "SignalE" (traffic light permitting);
 - "SignalF" (no traffic light).
 
 Besides, you need to put segmentation masks for the following elements:
@@ -65,7 +65,7 @@ The solution container will be run under the following conditions:
 - Maximal size of your solution archive compressed and decompressed: 10 GB;
 - Maximal size of the Docker image used: 15 GB.
 
-## Проверка качества
+## Quality check
 
 Panoptic quality (PQ) is a quality metric of the task AITrain:
 
