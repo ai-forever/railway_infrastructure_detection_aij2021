@@ -69,11 +69,11 @@ AITrain: детекция препятствий и элементов доро�
 
 В качестве метрики качества используется метрика panoptic quality (PQ):
 
-![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_1.png)  
+![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_1.png)  
 
 Что эквивалентно:  
 
-![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_2.png)  
+![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_2.png)  
 
 PQ – это метрика, используемая для оценки эффективности моделей сегментации (Panoptic Segmentation). В числителе дроби суммируются коэффициенты Intersection over Union (IoU) для всех True Positive решений модели. В знаменателе суммируются по модулю число всех True Positive результатов модели, половина всех False Positive и False Negative результатов.
 
