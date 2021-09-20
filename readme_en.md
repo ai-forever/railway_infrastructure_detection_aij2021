@@ -69,11 +69,11 @@ The solution container will be run under the following conditions:
 
 Panoptic quality (PQ) is a quality metric of the task AITrain:
 
-![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_1.png)  
+![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_1.png)  
 
 Which is equivalent to:  
 
-![Panoptic quality](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/images/pq_2.png)  
+![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_2.png)  
 
 PQ is the metric used for segmentation model performance assessment (Panoptic Segmentation). The numerator of the fraction is the sum of  Intersection over Union (IoU) ratios for all True Positive model solutions. The denominator is the sum of absolute values of all True Positive model results, half of all False Positive and False Negative results.
 
