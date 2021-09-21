@@ -87,3 +87,8 @@ Your solution will be assessed against a lazy fetch of RGB images in the trainin
 If several Participants have the same panoptic quality metric values, their solutions are assessed based on processing time metric (the time spent on processing problems).  
 
 You may choose three solutions to submit for the final evaluation. By default, these are solutions with the best Leaderboard metric.
+
+
+##
+[Пользовательское соглашение](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/terms_of_use.pdf/download)  
+[Правила соревнования](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/rules.pdf/download)
