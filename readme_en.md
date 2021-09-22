@@ -90,5 +90,5 @@ You may choose three solutions to submit for the final evaluation. By default, t
 
 
 ##
-[Пользовательское соглашение](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/terms_of_use.pdf/download)  
-[Правила соревнования](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/rules.pdf/download)
+[Terms of use](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/terms_of_use_en.pdf/download)  
+[Rules](https://api.dsworks.ru/dsworks-transfer/api/v1/public/file/rules_en.pdf/download)
