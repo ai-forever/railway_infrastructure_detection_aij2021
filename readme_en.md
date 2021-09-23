@@ -40,7 +40,7 @@ Participants should send the algorithm code in ZIP format to the testing system.
 The archive root must contain the metadata.json file containing the following:
 ```json
 {
-    "image": "cr.msk.sbercloud.ru/aicloud-base-images-test/custom/aij2021/aitrain:f66e1b5f-1269",
+    "image": "cr.msk.sbercloud.ru/aicloud-base-images/horovod-cuda10.1-tf2.3.0",
     "entrypoint": "python3 /home/jovyan/solution.py"
 }
 ```
@@ -49,9 +49,9 @@ Where `image` is a field with the docker image name, in which the solution will 
 
 To run solutions, existing environments can be used:
 
-- `cr.msk.sbercloud.ru/aicloud-base-images-test/custom/aij2021/aitrain:f66e1b5f-1269` — [Dockerfile](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/Dockerfile) with the description of the image and [requirements](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/requirements.txt) with libraries
+- [Basic images](https://docs.sbercloud.ru/aicloud/mlspace/concepts/environments__basic-images-for-training.html).
 
-Any other image which is available in `sbercloud` will be suitable. If necessary, you can prepare your own image, add necessary software and libraries to it (see [the manual on creating Docker images for `sbercloud`](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/sbercloud_instruction.md)); to use it, you will need to publish it on `sbercloud`.
+Any other image which is available in `sbercloud` will be suitable. If necessary, you can prepare your own image, add necessary software and libraries to it (see [the manual on creating Docker images for `sbercloud`](https://github.com/sberbank-ai/no_fire_with_ai_aij2021/blob/main/sbercloud_instruction.md)); to use it, you will need to publish it on `sbercloud`.
 
 ### Limitations
 
