@@ -45,7 +45,7 @@ The archive root must contain the metadata.json file containing the following:
 }
 ```
 
-Where `image` is a field with the docker image name, in which the solution will be run, entrypoint is a command that runs the solution. For solution, the archive root will be the current directory. 
+Where `image` is a field with the docker image name, in which the solution will be run, `entrypoint` is a command that runs the solution. For solution, the archive root will be the current directory. 
 
 To run solutions, existing environments can be used:
 
