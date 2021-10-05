@@ -40,7 +40,7 @@ Participants should send the algorithm code in ZIP format to the testing system.
 The archive root must contain the metadata.json file containing the following:
 ```json
 {
-    "image": "cr.msk.sbercloud.ru/aicloud-base-images/horovod-cuda10.1-tf2.3.0",
+    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.1",
     "entrypoint": "python3 /home/jovyan/solution.py"
 }
 ```
@@ -59,7 +59,7 @@ The solution container will be run under the following conditions:
 
 - 16 GB RAM;
 - 4 vCPU;
-- 1 GPU Tesla V100;
+- 1 GPU Tesla V100 32 Gb.
 - Time for performance: 30m;
 - Offline solution;
 - Maximal size of your solution archive compressed and decompressed: 10 GB;
@@ -67,24 +67,16 @@ The solution container will be run under the following conditions:
 
 ## Quality check
 
-Panoptic quality (PQ) is a quality metric of the task AITrain:
+Average of `mAP@.5:.95` and `meanIoU` is a quality metric of the task AITrain:
 
-![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_1.png)  
+[mAP description](https://cocodataset.org/#detection-eval)  
 
-Which is equivalent to:  
+[meanIoU description](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/MeanIoU)
 
-![Panoptic quality](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/pq_2.png)  
+```
+competition_metric = 0.5 * mAP@.5:.95 + 0.5 * meanIoU
+```
 
-PQ is the metric used for segmentation model performance assessment (Panoptic Segmentation). The numerator of the fraction is the sum of  Intersection over Union (IoU) ratios for all True Positive model solutions. The denominator is the sum of absolute values of all True Positive model results, half of all False Positive and False Negative results.
-
-Explanations: Intersection over Union (IoU) is the ratio showing how accurately the model determined object location in a particular image (accepts values from 0 to 1).  
-The solution is considered True Positive, if IoU>0.5.  
-The solution is considered False Positive, if 0<IoU<0.5.  
-The solution is considered False Negative, if 0=IoU.  
-
-Your solution will be assessed against a lazy fetch of RGB images in the training data format. Based on panoptic quality values, The Leaderboard is formed.  
-
-If several Participants have the same panoptic quality metric values, their solutions are assessed based on processing time metric (the time spent on processing problems).  
 
 You may choose three solutions to submit for the final evaluation. By default, these are solutions with the best Leaderboard metric.
 

@@ -1,0 +1,69 @@
+{
+    "info": {
+        "description": "This is custom AITrain Dataset",
+        "url": "https://dsworks.ru/en/champs/70c778a8-94e9-46de-8bad-aa2c83a757ae",
+        "version": "1.0",
+        "year": 2021,
+        "contributor": "AndrewTrefilov",
+        "date_created": "30-09-2021"
+    },
+    "images": [],
+    "annotations": [],
+    "categories": [
+        {
+            "supercategory": "vehicle",
+            "id": 1,
+            "name": "Car"
+        },
+        {
+            "supercategory": "person",
+            "id": 2,
+            "name": "Human"
+        },
+        {
+            "supercategory": "vehicle",
+            "id": 3,
+            "name": "Wagon"
+        },
+        {
+            "supercategory": "FacingSwitch",
+            "id": 4,
+            "name": "FacingSwitchL"
+        },
+        {
+            "supercategory": "FacingSwitch",
+            "id": 5,
+            "name": "FacingSwitchR"
+        },
+        {
+            "supercategory": "FacingSwitch",
+            "id": 6,
+            "name": "FacingSwitchNV"
+        },
+        {
+            "supercategory": "TrailingSwitch",
+            "id": 7,
+            "name": "TrailingSwitchL"
+        },
+        {
+            "supercategory": "TrailingSwitch",
+            "id": 8,
+            "name": "TrailingSwitchR"
+        },
+        {
+            "supercategory": "TrailingSwitch",
+            "id": 9,
+            "name": "TrailingSwitchNV"
+        },
+        {
+            "supercategory": "Signal",
+            "id": 10,
+            "name": "SignalE"
+        },
+        {
+            "supercategory": "Signal",
+            "id": 11,
+            "name": "SignalF"
+        }
+    ]
+}
