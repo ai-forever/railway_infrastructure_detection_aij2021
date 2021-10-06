@@ -7,7 +7,7 @@ from segmentation.src.segmentation_inference import get_segmentation_solution
 
 PATH_TO_DET_WEIGHTS = "models/detection_model.pt"
 PATH_TO_SEGMENTATION_WEIGHTS = "models/segmentation_model.pt"
-PATH_TO_TEST_IMAGES = "test/images/"
+PATH_TO_TEST_IMAGES = "input/images/"
 
 PATH_TO_PRED = "output/"
 PATH_TO_DT_ANN = "output/detection_predictions.json"
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # Detection model inference
     get_detection_solution(
-        PATH_TO_DET_WEIGHTS, PATH_TO_TEST_IMAGES, PATH_TO_DT_ANN, device, img_size=640
+        PATH_TO_DET_WEIGHTS, PATH_TO_TEST_IMAGES, PATH_TO_DT_ANN, device, img_size=1280
     )
     # Segmentation model inference 
     get_segmentation_solution(PATH_TO_TEST_IMAGES, PATH_TO_SEGMENTATION_ANN, device=device)
