@@ -16,7 +16,7 @@ PATH_TO_GT_JSON = "test/segmentation_gt.json"
 PATH_TO_PRED_JSON = "output/segmentation_predictions.json"
 
 
-def calculation_map_050_095(path_to_gt_ann, path_to_dt_ann):
+def calculation_map_050(path_to_gt_ann, path_to_dt_ann):
     annType = "bbox"
     cocoGt = COCO(path_to_gt_ann)
     cocoDt = cocoGt.loadRes(path_to_dt_ann)
@@ -24,8 +24,8 @@ def calculation_map_050_095(path_to_gt_ann, path_to_dt_ann):
     cocoEval.evaluate()
     cocoEval.accumulate()
     cocoEval.summarize()
-    map_050_095 = cocoEval.stats[0]
-    return map_050_095
+    map_050 = cocoEval.stats[1]
+    return map_050
 
 
 def get_mask_from_name(name: str, submit: Dict[str, Any]) -> np.ndarray:
@@ -57,10 +57,10 @@ def calculate_meanIOU(path_to_gt_json, path_to_predict_json):
     m = MeanIoU(num_classes=4)
 
     metric_for_imgs = []
-    for img_name in tqdm(gt["images"]):
+    for images_dict in tqdm(gt["images"]):
 
-        gt_mask = get_mask_from_name(img_name["file_name"], gt)
-        pred_mask = get_mask_from_name(img_name["file_name"], predictions)
+        gt_mask = get_mask_from_name(images_dict["file_name"], gt)
+        pred_mask = get_mask_from_name(images_dict["file_name"], predictions)
 
         m.update_state(gt_mask, pred_mask, sample_weight=None)
         metric = m.result().numpy()
@@ -74,11 +74,11 @@ def competition_metric(
     path_to_gt_json,
     path_to_predict_json,
 ):
-    map_050_095 = calculation_map_050_095(path_to_gt_ann, path_to_dt_ann)
+    map_050 = calculation_map_050(path_to_gt_ann, path_to_dt_ann)
     mean_iou = calculate_meanIOU(path_to_gt_json, path_to_predict_json)
-    print(f"Detection: {map_050_095}")
+    print(f"Detection: {map_050}")
     print(f"Segmentation: {mean_iou}")
-    return round(float(0.5 * map_050_095 + 0.5 * mean_iou), 5)
+    return round(float(0.7 * map_050 + 0.3 * mean_iou), 5)
 
 
 if __name__ == "__main__":

@@ -67,16 +67,15 @@ The solution container will be run under the following conditions:
 
 ## Quality check
 
-Average of `mAP@.5:.95` and `meanIoU` is a quality metric of the task AITrain:
+Average of `mAP@.5` and `meanIoU` is a quality metric of the task AITrain:
 
 [mAP description](https://cocodataset.org/#detection-eval)  
 
 [meanIoU description](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/MeanIoU)
 
 ```
-competition_metric = 0.5 * mAP@.5:.95 + 0.5 * meanIoU
+competition_metric = 0.7 * mAP@.5 + 0.3 * meanIoU
 ```
-
 
 You may choose three solutions to submit for the final evaluation. By default, these are solutions with the best Leaderboard metric.
 
