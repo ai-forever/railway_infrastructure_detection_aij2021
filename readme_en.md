@@ -67,7 +67,7 @@ The solution container will be run under the following conditions:
 
 ## Quality check
 
-Average of `mAP@.5` and `meanIoU` is a quality metric of the task AITrain:
+Weighted average of `mAP@.5` and `meanIoU` is a quality metric of the task AITrain:
 
 [mAP description](https://cocodataset.org/#detection-eval)  
 
