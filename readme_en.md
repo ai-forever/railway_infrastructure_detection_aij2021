@@ -55,6 +55,8 @@ Any other image which is available in `sbercloud` will be suitable. If necessary
 
 ### Limitations
 
+During one day, a Participant or a Team of Participants can upload no more than three solutions for evaluation. Only valid attempts that have received a numerical estimate are taken into account.  
+
 The solution container will be run under the following conditions:
 
 - 16 GB RAM;
