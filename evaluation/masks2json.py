@@ -46,8 +46,8 @@ def convert_masks2rle_json(path_to_masks: str, path_to_save: str) -> None:
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path_to_masks', default='./test/masks', type=str)
-    parser.add_argument('--path_to_save', default='./test/segmentation_gt.json', type=str)
+    parser.add_argument('--path_to_masks', default='./input/masks', type=str)
+    parser.add_argument('--path_to_save', default='./input/segmentation_gt.json', type=str)
     args = parser.parse_args()
 
     convert_masks2rle_json(args.path_to_masks, 

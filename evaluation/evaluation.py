@@ -5,14 +5,16 @@ from tqdm import tqdm
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 from pycocotools import mask as pctmask
-from tensorflow.keras.metrics import MeanIoU
 import numpy as np
+import torch
+from collections import defaultdict
 
 
-PATH_TO_GT_ANN = "test/detection_gt.json"
+
+PATH_TO_GT_ANN = "input/detection_gt.json"
 PATH_TO_DT_ANN = "output/detection_predictions.json"
 
-PATH_TO_GT_JSON = "test/segmentation_gt.json"
+PATH_TO_GT_JSON = "input/segmentation_gt.json"
 PATH_TO_PRED_JSON = "output/segmentation_predictions.json"
 
 
@@ -54,18 +56,34 @@ def calculate_meanIOU(path_to_gt_json, path_to_predict_json):
     with open(path_to_predict_json, "r") as f:
         predictions = json.load(f)
 
-    m = MeanIoU(num_classes=4)
+    eps = 1e-8
+    inersection_per_class = defaultdict(int)
+    union_per_class = defaultdict(int)
 
-    metric_for_imgs = []
-    for images_dict in tqdm(gt["images"]):
+    for image_dict in tqdm(gt["images"]):
 
-        gt_mask = get_mask_from_name(images_dict["file_name"], gt)
-        pred_mask = get_mask_from_name(images_dict["file_name"], predictions)
+        gt_mask = get_mask_from_name(image_dict["file_name"], gt)
+        pred_mask = get_mask_from_name(
+            image_dict["file_name"], predictions)
+        gt_mask = torch.tensor(gt_mask)
+        pred_mask = torch.tensor(pred_mask)
 
-        m.update_state(gt_mask, pred_mask, sample_weight=None)
-        metric = m.result().numpy()
-        metric_for_imgs.append(metric)
-    return np.mean(metric_for_imgs)
+        for class_id in (0, 1, 2, 3):
+            y_pred_i = (pred_mask == class_id).float()
+            y_true_i = (gt_mask == class_id).float()
+
+            intersection = torch.sum(y_pred_i * y_true_i).item()
+            cardinality = (torch.sum(y_pred_i) + torch.sum(y_true_i)).item()
+            union = cardinality - intersection
+
+            inersection_per_class[class_id] += intersection
+            union_per_class[class_id] += union
+
+    ious = []
+    for class_id in (0, 1, 2, 3):
+        score = (inersection_per_class[class_id]) / (union_per_class[class_id] + eps)
+        ious.append(score)
+    return np.mean(ious)
 
 
 def competition_metric(

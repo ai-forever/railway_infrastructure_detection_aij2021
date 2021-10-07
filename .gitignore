@@ -1,2 +1,7 @@
 .vscode/
 __pycache__/
+aitrain_env/
+input/
+output/
+*.pt
+*.pth

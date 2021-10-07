@@ -3,9 +3,9 @@ import uuid
 import json
 
 
-PATH_TO_GT_BOXES = "test/bboxes/"
+PATH_TO_GT_BOXES = "input/bboxes/"
 PATH_TO_DET_ANN_TEMPLATE = "evaluation/det_ann_template.json"
-PATH_TO_GT_ANN = "test/detection_gt.json"
+PATH_TO_GT_ANN = "input/detection_gt.json"
 
 
 def make_coco_detection_ann(path_to_bboxes, ann_template):
