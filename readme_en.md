@@ -1,5 +1,6 @@
 AITrain: detecting obstacles and railway infrastructure components
 =================================
+[link to github](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021/blob/main/readme_en.md)
 
 Competition of algorithms for detecting obstacles and railway infrastructure components.  
 
