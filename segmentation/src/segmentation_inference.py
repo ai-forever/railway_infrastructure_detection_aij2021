@@ -22,7 +22,8 @@ from segmentation.src.dataset import RZDDataset
 from segmentation.src.transforms import get_infer_augs
 from segmentation.src.utils import read_image, prepare_segmentation_submit
 
-
+import os
+BASE_DIR = "/home/jovyan"
 
 
 def get_segmentation_solution(path_to_images: str, 
@@ -53,7 +54,7 @@ def get_segmentation_solution(path_to_images: str,
     model.eval()
     model.to(device)
 
-    checkpoint = torch.load('models/segmentation_model.pth', map_location=torch.device(device))
+    checkpoint = torch.load(os.path.join(BASE_DIR, "models/segmentation_model.pth"), map_location=torch.device(device))
     model.load_state_dict(checkpoint['model_state_dict'])
 
     runner = CustomRunner(
