@@ -39,7 +39,7 @@ AITrain: детекция препятствий и элементов доро�
 В корне архива обязательно должен быть файл metadata.json следующего содержания:
 ```json
 {
-    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.1",
+    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.5",
     "entrypoint": "python3 /home/jovyan/solution.py"
 }
 ```
