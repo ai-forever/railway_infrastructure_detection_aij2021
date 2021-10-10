@@ -5,13 +5,15 @@ import torch
 from detection.detection_predict import get_detection_solution
 from segmentation.src.segmentation_inference import get_segmentation_solution
 
-PATH_TO_DET_WEIGHTS = "models/detection_model.pt"
-PATH_TO_SEGMENTATION_WEIGHTS = "models/segmentation_model.pt"
-PATH_TO_TEST_IMAGES = "input/images/"
+BASE_DIR = "/home/jovyan"
 
-PATH_TO_PRED = "output/"
-PATH_TO_DT_ANN = "output/detection_predictions.json"
-PATH_TO_SEGMENTATION_ANN = "output/segmentation_predictions.json"
+PATH_TO_DET_WEIGHTS = os.path.join(BASE_DIR, "models/detection_model.pt")
+PATH_TO_SEGMENTATION_WEIGHTS = os.path.join(BASE_DIR, "models/segmentation_model.pt")
+PATH_TO_TEST_IMAGES = os.path.join(BASE_DIR, "input/images/")
+
+PATH_TO_PRED = os.path.join(BASE_DIR, "output/")
+PATH_TO_DT_ANN = os.path.join(BASE_DIR, "output/detection_predictions.json")
+PATH_TO_SEGMENTATION_ANN = os.path.join(BASE_DIR, "output/segmentation_predictions.json")
 
 
 if __name__ == "__main__":

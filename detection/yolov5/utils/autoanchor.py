@@ -10,7 +10,7 @@ import torch
 import yaml
 from tqdm import tqdm
 
-from utils.general import colorstr
+from detection.yolov5.utils.general import colorstr
 
 
 def check_anchor_order(m):

@@ -7,8 +7,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from models.common import Conv
-from utils.downloads import attempt_download
+from detection.yolov5.models.common import Conv
+from detection.yolov5.utils.downloads import attempt_download
 
 
 class CrossConv(nn.Module):
@@ -86,7 +86,7 @@ class Ensemble(nn.ModuleList):
 
 
 def attempt_load(weights, map_location=None, inplace=True, fuse=True):
-    from models.yolo import Detect, Model
+    from detection.yolov5.models.yolo import Detect, Model
 
     # Loads an ensemble of models weights=[a,b,c] or a single model weights=[a] or weights=a
     model = Ensemble()
