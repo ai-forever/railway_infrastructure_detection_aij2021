@@ -60,8 +60,8 @@ During one day, a Participant or a Team of Participants can upload no more than 
 
 The solution container will be run under the following conditions:
 
-- 16 GB RAM;
-- 4 vCPU;
+- 94 GB RAM;
+- 3 vCPU;
 - 1 GPU Tesla V100 32 Gb.
 - Time for performance: 30m;
 - Offline solution;
