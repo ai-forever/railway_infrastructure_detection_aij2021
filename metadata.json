@@ -1,4 +1,4 @@
 {
-    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.1",
+    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.5",
     "entrypoint": "python3 /home/jovyan/solution.py"
 }
