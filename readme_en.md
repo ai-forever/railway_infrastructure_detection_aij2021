@@ -41,7 +41,7 @@ Participants should send the algorithm code in ZIP format to the testing system.
 The archive root must contain the metadata.json file containing the following:
 ```json
 {
-    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.1",
+    "image": "cr.msk.sbercloud.ru/aijcontest2021/aitrain-base:v0.0.5",
     "entrypoint": "python3 /home/jovyan/solution.py"
 }
 ```
