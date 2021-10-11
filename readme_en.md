@@ -66,7 +66,7 @@ The solution container will be run under the following conditions:
 - Time for performance: 15m (300 images);
 - Offline solution;
 - Maximal size of your solution archive compressed and decompressed: 10 GB;
-- Maximal size of the Docker image used: 15 GB.
+- Maximal size of the Docker image used: 25 GB.
 
 ## Quality check
 
