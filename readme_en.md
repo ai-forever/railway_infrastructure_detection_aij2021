@@ -80,7 +80,11 @@ Weighted average of `mAP@.5` and `meanIoU` is a quality metric of the task AITra
 competition_metric = 0.7 * mAP@.5 + 0.3 * meanIoU
 ```
 
-You may choose three solutions to submit for the final evaluation. By default, these are solutions with the best Leaderboard metric.
+You may choose three solutions to submit for the final evaluation. By default, these are solutions with the best Leaderboard metric. 
+
+If several Participants have the same competition_metric values, their solutions are assessed based on processing time (the time spent on processing tasks).  The faster the decision is processed, the higher the position in the leaderboard.
+
+If both the competition_metric values and the processing time of the models for several participants coincide, then the time to upload the solution to the Contest Site will be taken into account. The previously uploaded solution to the Contest Site will be assigned a higher place.
 
 
 ##
