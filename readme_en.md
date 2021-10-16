@@ -29,7 +29,7 @@ Besides, you need to put segmentation masks for the following elements:
  - 7 - "AlternativeRailPolygon";
  - 10 - "Train"*.
 
-Note: * - the first and last railcars are to be detected, and other railcars need segmentation masks.
+Note: * - the first and last railcars are to be detected, and all railcars need segmentation masks.
 
 
 ## Solution format
