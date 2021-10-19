@@ -108,5 +108,5 @@ def prepare_segmentation_submit(image_paths: List[Path],
             "annotations": image_annots
             }
         )
-        with open(path_to_save, "w") as json_file:
-            json.dump(submit, json_file)
+    with open(path_to_save, "w") as json_file:
+        json.dump(submit, json_file)
