@@ -1,6 +1,7 @@
 AITrain: детекция препятствий и элементов дорожной инфраструктуры
 =================================
-[link to github](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021)
+[link to github](https://github.com/sberbank-ai/railway_infrastructure_detection_aij2021)  
+[Вебинар с разбором задачи](https://www.youtube.com/watch?v=7iSySv-3r_g)
 
 Соревнование алгоритмов определения препятствий и элементов ЖД-инфраструктуры.  
 
