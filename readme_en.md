@@ -53,7 +53,7 @@ To run solutions, existing environments can be used:
 
 - [Basic images](https://docs.sbercloud.ru/aicloud/mlspace/concepts/environments__basic-images-for-training.html).
 
-Any other image which is available in `sbercloud` will be suitable. If necessary, you can prepare your own image, add necessary software and libraries to it (see [the manual on creating Docker images for `sbercloud`](https://github.com/sberbank-ai/no_fire_with_ai_aij2021/blob/main/sbercloud_instruction.md)); to use it, you will need to publish it on `sbercloud`.
+Any other image which is available in `sbercloud` will be suitable. If necessary, you can prepare your own image, add necessary software and libraries to it (see [the manual on creating Docker images for `sbercloud`](https://github.com/sberbank-ai/no_fire_with_ai_aij2021/blob/main/sbercloud_instruction_en.md)); to use it, you will need to publish it on `sbercloud`.
 
 ### Limitations
 
