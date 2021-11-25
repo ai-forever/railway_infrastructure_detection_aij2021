@@ -9,7 +9,7 @@ AITrain: детекция препятствий и элементов доро�
 В качестве входных данных используются RGB изображения, полученные с различных камер, установленных на электропоезде и аннотации к ним.
 
 ## Результаты соревнования
-![Corrected forecast](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/leaderboard_AITrain_private.png)
+![results](https://raw.githubusercontent.com/sberbank-ai/railway_infrastructure_detection_aij2021/main/images/leaderboard_AITrain_private.png)
 
 ## Постановка задачи
 
